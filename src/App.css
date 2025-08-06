@@ -26,6 +26,8 @@ body {
   flex-direction: column;
   background-color: var(--light-bg);
   color: var(--light-text);
+  align-items: center;
+  justify-content: center;
 }
 
 .app.dark {
@@ -50,6 +52,13 @@ button {
   transition: background 0.3s;
   font-size: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+  outline: none;
 }
 
 button:hover {
