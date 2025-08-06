@@ -1,18 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  --light-bg: #f2f4f8;
+  --light-text: #1a1a1a;
+  --dark-bg: #1a1a2e;
+  --dark-text: #f2f2f2;
+
+  --card-light: #ffffff;
+  --card-dark: #292946;
+
+  --accent: #6366f1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.4s, color 0.4s;
+}
+
 .app {
   min-height: 100vh;
   padding: 2rem;
   transition: all 0.3s ease;
-  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
-.light {
-  background-color: #f9f9f9;
-  color: #1a1a1a;
-}
-
-.dark {
-  background-color: #1a1a1a;
-  color: #f9f9f9;
+.app.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 .header {
@@ -23,33 +41,64 @@
 
 button {
   padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid currentColor;
-  color: inherit;
-  font-weight: bold;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #4f46e5;
 }
 
-.content {
-  max-width: 800px;
-  margin: 0 auto;
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+p.description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.app.dark p.description {
+  color: #ccc;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .card {
   padding: 1.5rem;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid currentColor;
+  border-radius: 1rem;
+  transition: background 0.3s ease;
+  background-color: var(--card-light);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.app.dark .card {
+  background-color: var(--card-dark);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+.card span {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }

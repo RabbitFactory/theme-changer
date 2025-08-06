@@ -13,14 +13,36 @@ function App() {
       </header>
 
       <main className="content">
-        <h1>Scalable Theme Toggle</h1>
-        <p>This is a demonstration of how theme switching works in a React app.</p>
-        <p>The background, text color, and other UI elements will adapt to the selected theme.</p>
+        <h1>✨ Theme Playground</h1>
+        <p className="description">
+          Toggle between elegant dark mode and bright vibes. Feel the mood shift.
+        </p>
 
         <section className="card-grid">
-          <div className="card">💡 Tip 1: Use Context</div>
-          <div className="card">⚙️ Tip 2: Use CSS Variables</div>
-          <div className="card">🎨 Tip 3: Style Responsively</div>
+          <div className="card">
+            <span>🌈</span>
+            Vibrant Color Modes
+          </div>
+          <div className="card">
+            <span>🛠️</span>
+            Developer-Friendly Setup
+          </div>
+          <div className="card">
+            <span>🎨</span>
+            Styled with Love
+          </div>
+          <div className="card">
+            <span>⚡</span>
+            Fast Refresh Ready
+          </div>
+          <div className="card">
+            <span>📦</span>
+            Clean Architecture
+          </div>
+          <div className="card">
+            <span>🌙</span>
+            Dark Mode Done Right
+          </div>
         </section>
       </main>
     </div>
